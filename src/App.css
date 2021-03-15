@@ -1,38 +1,56 @@
 .App {
-  text-align: center;
+        display : flex;
+ flex-direction : column;
+ max-width : 800px;
+ margin-left: auto;
+ margin-right: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board {
+        display : flex;
+ flex-direction : row;
+      flex-wrap : nowrap;
+  width:fit-content;
+   margin-left: auto;
+ margin-right: auto;
+        padding : 1em 2em 2em;
+          border-radius : 10%;
+  background-color : dimgray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.column {
+           display : flex;
+    flex-direction : column-reverse;
+         flex-wrap : nowrap;
+      margin-left : 0.5em;
+      margin-right : 0.5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tile {
+          width : 100%;
+        margin-top : 0.5em;
+        margin-bottom: 0.5em;
+      min-width : 50px;
+      min-height : 50px;
+  border-radius : 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.emptyTile {
+  background-color : linen;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.redPlayerTile {
+  background-color : red;
+}
+
+.yellowPlayerTile {
+  background-color : yellow;
+}
+
+.column:hover{
+  background-color: lightgreen;
+}
+
+.columnFull:hover{
+  background-color : lightcoral;
 }
